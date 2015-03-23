@@ -26,7 +26,7 @@
                 Bispix
             </h1>
             <p style="margin-top: 1.5em; margin-bottom: 1.5em;">
-                O seu buscador do Santa Cruz!
+                O seu buscador da UFG Regional Jataí!
             </p>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
