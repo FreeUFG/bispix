@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('esdras-Inspiron-1545'),
+	'local' => array('Esdras-PC', 'Esdras-Home'),
 	'production' => array('bispojr.com'),
 
 ));
