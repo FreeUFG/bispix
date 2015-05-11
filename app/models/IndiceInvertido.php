@@ -41,7 +41,7 @@ class IndiceInvertido extends Eloquent{
 					foreach($termos as $t){
 						$posicao++;
 						$registro = array(
-							'termo' => utf8_decode($t),
+							'termo' => $t,
 							'documento' => $arq,
 							'posicao' => $posicao
 						);
