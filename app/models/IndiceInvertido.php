@@ -10,6 +10,8 @@ class IndiceInvertido extends Eloquent{
 		$lista = scandir($nomeDiretorio);
 		$chave = array_search(".", $lista);
 		unset($lista[$chave]);
+		$chave = array_search("..", $lista);
+		unset($lista[$chave]);
 
 		return $lista;
 	}	
