@@ -1,6 +1,13 @@
 # Bispix
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
+## Ferramentas importantes
+  - [Git](http://git-scm.com/downloads): Sistema para controle de versão de código;
+  - [XAMPP](https://www.apachefriends.org/pt_br/download.html): Distribuição Apache fácil de instalar contendo PHP, MySQL e Perl;
+  - [Composer](https://getcomposer.org/download/): Gerenciador de dependências para PHP;
+  - [Sublime](http://www.sublimetext.com/3): Editor de texto, muito utilizado por desenvolvedores web;
+  - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/): Ferramenta gratuita para gerenciamento de banco de dados (é necessário o registro gratuito na Oracle).
+
 ## FAQ - uso da ferramenta
 
 1. Como utilizar o banco de dados no Laravel?
