@@ -28,7 +28,7 @@ max_execution_time=30
 ```
   - Mude a linha ``max_execution_time=30`` para ``max_execution_time=600``, por exemplo (de 30s para 10min).
 
-3. Estou tendo mensagens de erros no navegador associadas a algum arquivo ``autoload``!
+3. Estou tendo mensagens de aviso no navegador associadas a algum arquivo ``autoload`` (warning na linha 17)!
   - Possivelmente existe alguma dependência desatualizada no seu projeto;
   - Execute, na linha de comando, dentro do diretório do projeto, o comando ``composer update`` (necessária conexão com Internet).
   
