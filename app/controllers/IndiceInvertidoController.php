@@ -73,7 +73,7 @@ class IndiceInvertidoController extends BaseController {
 	}
 	public function toklog()
 	{
-		echo file_get_contents(app_path().'/data/colecao/log.txt');
+		echo file_get_contents(app_path().'/data/colecoes/log.txt');
 
 	}
 

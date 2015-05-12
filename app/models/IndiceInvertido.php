@@ -48,9 +48,14 @@ class IndiceInvertido extends Eloquent{
 						DB::table('indice')->insert( $registro );
 					}
 				}
+				fclose($pont);
 			}
 		}
-		echo 'Lido com sucesso! </br>';
-		fclose($pont);
+
+		//Limpando o log do arquivo
+		$logFile = fopen($log,'w');
+		$data = "";
+		fwrite($logFile, $data);
+		fclose($logFile);
 	}
 }
