@@ -6,7 +6,7 @@ Route::post('/results', 'PrincipalController@results');
 
 Route::get('/gerar-indice', 'IndiceInvertidoController@index');
 Route::put('/gerar-indice/tokenizer', 'IndiceInvertidoController@tokenizer');
-Route::put('/gerar-indice/pre-processamento', 'IndiceInvertidoController@preprocessamento');
+Route::get('/gerar-indice/pre-processamento', 'IndiceInvertidoController@preprocessamento');
 Route::put('/gerar-indice/indice-invertido', 'IndiceInvertidoController@indice');
 
 Route::get('/teste', function(){

@@ -15,16 +15,16 @@
 
 <div class="container-fluid">
 	<ul class="nav nav-pills">
-		<li class="{{ $nav['colecoes'] }}">
+		<li id="aba-colecao" class="{{ $nav['colecoes'] }}">
 			<a><span class="badge">1</span> Coleções</a>
 		</li>
-	  	<li class="{{ $nav['tokenizer'] }}">
+	  	<li id="aba-tokenizer" class="{{ $nav['tokenizer'] }}">
 	  		<a><span class="badge">2</span> Tokenizer</a>
 	  	</li>
-	  	<li class="{{ $nav['preprocessamento'] }}">
+	  	<li id="aba-preprocessamento" class="{{ $nav['preprocessamento'] }}">
 	  		<a><span class="badge">3</span> Pré-processamento</a>
 	  	</li>
-	  	<li class="{{ $nav['indice'] }}">
+	  	<li id="aba-indice" class="{{ $nav['indice'] }}">
 	  		<a><span class="badge">4</span> Índice Invertido</a>
 	  	</li>
 	</ul>

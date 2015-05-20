@@ -18,19 +18,10 @@ class IndiceInvertidoController extends BaseController {
 	}
 	public function tokenizer()
 	{
-		$data['viewName'] = 'block.gerarIndice.index';
-		$data['panelName'] = 'block.gerarIndice.tokenizer';
-		$data['scriptName'] = 'block.scriptGeraIndice';
+        $nomeColecao = Input::get('nome-colecao');
+        IndiceInvertido::quebraPalavras($nomeColecao);
 
-		$data['navAtivo'] = 'tokenizer';
-		$data['panelUrl'] = URL::to('/gerar-indice/pre-processamento');
-        $data['panelId'] = 'tokenizerForm';
-        $data['panelNext'] = 'Próximo';
-        $data['panelIcon'] = 'forward';
-
-        IndiceInvertido::quebraPalavras("santa");
-
-		return View::make('template.empty', $data);
+        return Redirect::to('/gerar-indice/pre-processamento');
 	}
 	public function preprocessamento()
 	{

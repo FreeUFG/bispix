@@ -18,8 +18,11 @@
                     <span class="sr-only">40% Complete (success)</span> \
                   </div> \
                 </div>';
-                if(x != "")
+                if(x != ""){
                     $('.colecao-loader-2').html(y);
+                    $('#aba-colecao').attr('class', 'disabled');
+                    $('#aba-tokenizer').attr('class', 'active');
+                }
     		},1000);
 		});
     </script>  
