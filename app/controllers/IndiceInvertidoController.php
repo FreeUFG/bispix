@@ -4,17 +4,12 @@ class IndiceInvertidoController extends BaseController {
 
 	public function index()
 	{
-		$data['viewName'] = 'block.gerarIndice.index';
-		$data['panelName'] = 'block.gerarIndice.colecao';
-		$data['scriptName'] = 'block.scriptGeraIndice';
+		if( IndiceInvertido::bancoPronto() ){	
+			$data = IndiceInvertido::parametros('index');
+			return View::make('template.empty', $data);
+		}
 
-		$data['navAtivo'] = 'colecoes';
-		$data['panelUrl'] = URL::to('/gerar-indice/tokenizer');
-        $data['panelId'] = 'colecaoForm';
-        $data['panelNext'] = 'Próximo';
-        $data['panelIcon'] = 'forward';
-
-		return View::make('template.empty', $data);
+		return Redirect::to('/excecao/banco-pronto');
 	}
 	public function tokenizer()
 	{

@@ -9,6 +9,8 @@ Route::put('/gerar-indice/tokenizer', 'IndiceInvertidoController@tokenizer');
 Route::get('/gerar-indice/pre-processamento', 'IndiceInvertidoController@preprocessamento');
 Route::put('/gerar-indice/indice-invertido', 'IndiceInvertidoController@indice');
 
+Route::get('/excecao/banco-pronto', 'ExcecaoController@bancoPronto');
+
 Route::get('/teste', function(){
 	IndiceInvertido::quebraPalavras('santa');
 });

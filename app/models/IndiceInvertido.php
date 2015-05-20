@@ -58,4 +58,37 @@ class IndiceInvertido extends Eloquent{
 		fwrite($logFile, $data);
 		fclose($logFile);
 	}
+	public static function bancoPronto()
+	{
+		$nomeTabela = (new self)->getTable();
+
+		if( Schema::hasTable($nomeTabela) ){
+			$val = self::all();
+			if(count($val) == 0) 
+				return true;
+		}
+		return false;		
+	}
+	public static function parametros($nomeMetodo)
+	{
+		switch($nomeMetodo){
+			case 'index':
+				return self::parametrosIndex();
+				break;
+		}
+	}
+	private static function parametrosIndex()
+	{
+		$data['viewName'] = 'block.gerarIndice.index';
+		$data['panelName'] = 'block.gerarIndice.colecao';
+		$data['scriptName'] = 'block.scriptGeraIndice';
+
+		$data['navAtivo'] = 'colecoes';
+		$data['panelUrl'] = URL::to('/gerar-indice/tokenizer');
+        $data['panelId'] = 'colecaoForm';
+        $data['panelNext'] = 'Próximo';
+        $data['panelIcon'] = 'forward';
+
+        return $data;
+	}
 }
