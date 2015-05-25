@@ -23,6 +23,11 @@ class IndiceInvertidoController extends BaseController {
 		$data = IndiceInvertido::parametros('preprocessamento');
 		return View::make('template.empty', $data);
 	}
+	public function preprocessamentoAlgoritmo()
+	{
+			IndiceInvertido::preprocessamentoAlgoritmo();
+			//return Redirect::to('/');
+	}
 	public function indice()
 	{
 		$data['viewName'] = 'block.gerarIndice.index';

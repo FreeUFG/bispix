@@ -19,6 +19,8 @@ class CreateIndiceTable extends Migration {
 				->integer('posicao');
 			$table
 				->unique( array('documento', 'posicao') );
+			$table
+				->timestamps();
 		});
 	}
 

@@ -39,15 +39,16 @@ class IndiceInvertido extends Eloquent{
 					$termos = explode(' ', $linha);
 						
 					foreach($termos as $t){
+
+						$tripla = new IndiceInvertido;
 						$valor = trim($t);
+						
 						if( strlen($valor) ){
 							$posicao++;
-							$registro = array(
-								'termo' => $t,
-								'documento' => $arq,
-								'posicao' => $posicao
-							);
-							DB::table('indice')->insert( $registro );
+							$tripla->termo = $t;
+							$tripla->documento = $arq;
+							$tripla->posicao = $posicao;
+							$tripla->save();
 						}
 					}
 				}
@@ -60,6 +61,30 @@ class IndiceInvertido extends Eloquent{
 		$data = "";
 		fwrite($logFile, $data);
 		fclose($logFile);
+	}
+	public static function preprocessamentoAlgoritmo()
+	{
+		$triplas = self::all();
+
+		foreach ($triplas as $t) {
+			$termo = $t->termo;
+			$termo = self::normalizar($termo);
+			
+			$t->termo = $termo;
+			$t->save();
+		}
+	}
+	public static function normalizar($termo)
+	{
+		$simbolosRemocao = 
+			array(
+				"?", "!", ",", ";", "(", 
+				")", "\"", ":", "."
+			);
+		$termoNormalizado = str_replace($simbolosRemocao, "", $termo);
+		$termoNormalizado = mb_strtolower($termoNormalizado);
+
+		return $termoNormalizado;
 	}
 	public static function bancoPronto()
 	{
@@ -104,7 +129,7 @@ class IndiceInvertido extends Eloquent{
 		$data['scriptName'] = 'block.script';
 
 		$data['navAtivo'] = 'preprocessamento';
-		$data['panelUrl'] = URL::to('/gerar-indice/indice-invertido');
+		$data['panelUrl'] = URL::to('/gerar-indice/pre-processamento-2');
         $data['panelId'] = 'preprocessamentoForm';
         $data['panelNext'] = 'Próximo';
         $data['panelIcon'] = 'forward';

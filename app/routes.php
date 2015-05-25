@@ -7,6 +7,7 @@ Route::post('/resultados', 'PrincipalController@resultados');
 Route::get('/gerar-indice', 'IndiceInvertidoController@index');
 Route::put('/gerar-indice/tokenizer', 'IndiceInvertidoController@tokenizer');
 Route::get('/gerar-indice/pre-processamento', 'IndiceInvertidoController@preprocessamento');
+Route::put('/gerar-indice/pre-processamento-2', 'IndiceInvertidoController@preprocessamentoAlgoritmo');
 Route::put('/gerar-indice/indice-invertido', 'IndiceInvertidoController@indice');
 
 Route::get('/excecao/banco-pronto', 'ExcecaoController@bancoPronto');
