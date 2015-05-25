@@ -78,17 +78,34 @@ class IndiceInvertido extends Eloquent{
 			case 'index':
 				return self::parametrosIndex();
 				break;
+			case 'preprocessamento':
+				return self::parametrosPreprocessamento();
+				break;
 		}
 	}
 	private static function parametrosIndex()
 	{
-		$data['viewName'] = 'block.gerarIndice.index';
-		$data['panelName'] = 'block.gerarIndice.colecao';
-		$data['scriptName'] = 'block.scriptGeraIndice';
+		$data['viewName'] = 'site.gerar-indice';
+		$data['panelName'] = 'site.colecao.index';
+		$data['scriptName'] = 'site.colecao.script';
 
 		$data['navAtivo'] = 'colecoes';
 		$data['panelUrl'] = URL::to('/gerar-indice/tokenizer');
         $data['panelId'] = 'colecaoForm';
+        $data['panelNext'] = 'Próximo';
+        $data['panelIcon'] = 'forward';
+
+        return $data;
+	}
+	private static function parametrosPreprocessamento()
+	{
+        $data['viewName'] = 'site.gerar-indice';
+		$data['panelName'] = 'site.preprocessamento.index';
+		$data['scriptName'] = 'block.script';
+
+		$data['navAtivo'] = 'preprocessamento';
+		$data['panelUrl'] = URL::to('/gerar-indice/indice-invertido');
+        $data['panelId'] = 'preprocessamentoForm';
         $data['panelNext'] = 'Próximo';
         $data['panelIcon'] = 'forward';
 

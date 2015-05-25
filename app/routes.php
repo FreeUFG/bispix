@@ -1,8 +1,8 @@
 <?php
 
 Route::get('/', 'PrincipalController@index');
-Route::get('/results', 'PrincipalController@results');
-Route::post('/results', 'PrincipalController@results');
+Route::get('/resultados', 'PrincipalController@resultados');
+Route::post('/resultados', 'PrincipalController@resultados');
 
 Route::get('/gerar-indice', 'IndiceInvertidoController@index');
 Route::put('/gerar-indice/tokenizer', 'IndiceInvertidoController@tokenizer');
@@ -11,9 +11,5 @@ Route::put('/gerar-indice/indice-invertido', 'IndiceInvertidoController@indice')
 
 Route::get('/excecao/banco-pronto', 'ExcecaoController@bancoPronto');
 
-Route::get('/teste', function(){
-	IndiceInvertido::quebraPalavras('santa');
-});
-
-Route::get('colecao{id}', 'IndiceInvertidoController@colecao');
-Route::get('toklog', 'IndiceInvertidoController@toklog');
+Route::get('colecao{id}', 'IndiceInvertidoController@colecao');		//Importante para a exibição de documentos
+Route::get('toklog', 'IndiceInvertidoController@toklog');			//Importante para a exibição da barra de progresso

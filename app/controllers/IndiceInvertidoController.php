@@ -20,16 +20,7 @@ class IndiceInvertidoController extends BaseController {
 	}
 	public function preprocessamento()
 	{
-		$data['viewName'] = 'block.gerarIndice.index';
-		$data['panelName'] = 'block.gerarIndice.preprocessamento';
-		$data['scriptName'] = 'block.scriptGeraIndice';
-
-		$data['navAtivo'] = 'preprocessamento';
-		$data['panelUrl'] = URL::to('/gerar-indice/indice-invertido');
-        $data['panelId'] = 'preprocessamentoForm';
-        $data['panelNext'] = 'Próximo';
-        $data['panelIcon'] = 'forward';
-
+		$data = IndiceInvertido::parametros('preprocessamento');
 		return View::make('template.empty', $data);
 	}
 	public function indice()

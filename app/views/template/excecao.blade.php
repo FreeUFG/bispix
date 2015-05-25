@@ -1,3 +1,3 @@
 @include('block.header')
 @include('block.topmenu')
-@include('block.excecao')
+@include('site.excecao.index')

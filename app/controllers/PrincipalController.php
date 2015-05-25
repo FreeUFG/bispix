@@ -9,8 +9,7 @@ class PrincipalController extends BaseController {
 
 	public function results()
 	{
-		$data['viewName'] = 'block.resultsList';
-		$data['scriptName'] = 'block.scriptResults';
+		$data = Principal::parametros('resultados');
 		return View::make('template.empty', $data);
 	}
 

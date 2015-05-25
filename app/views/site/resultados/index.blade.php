@@ -36,4 +36,4 @@
     </div>
 </div>
 
-@include('block.modalDocument')
+@include('site.resultados.documento-modal')
