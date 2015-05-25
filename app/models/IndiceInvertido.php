@@ -35,17 +35,20 @@ class IndiceInvertido extends Eloquent{
 				while(true) {
 					$linha = fgets($pont);
 					if ($linha==null) break;
-					
+
 					$termos = explode(' ', $linha);
-					
+						
 					foreach($termos as $t){
-						$posicao++;
-						$registro = array(
-							'termo' => $t,
-							'documento' => $arq,
-							'posicao' => $posicao
-						);
-						DB::table('indice')->insert( $registro );
+						$valor = trim($t);
+						if( strlen($valor) ){
+							$posicao++;
+							$registro = array(
+								'termo' => $t,
+								'documento' => $arq,
+								'posicao' => $posicao
+							);
+							DB::table('indice')->insert( $registro );
+						}
 					}
 				}
 				fclose($pont);
