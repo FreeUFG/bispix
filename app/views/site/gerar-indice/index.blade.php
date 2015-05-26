@@ -1,9 +1,10 @@
 <?php
 	$nav = array(  
-		'colecoes' => 'disabled',
-		'tokenizer' => 'disabled',
-		'preprocessamento' => 'disabled',
-		'indice' => 'disabled'
+		'passo-1' => 'disabled',
+		'passo-2' => 'disabled',
+		'passo-3' => 'disabled',
+		'passo-4' => 'disabled',
+		'fim' => 'disabled'
 	);
 
 	$nav[$navAtivo] = "active";
@@ -15,17 +16,20 @@
 
 <div class="container-fluid">
 	<ul class="nav nav-pills">
-		<li id="aba-colecao" class="{{ $nav['colecoes'] }}">
-			<a><span class="badge">1</span> Coleções</a>
+		<li id="aba-passo-1" class="{{ $nav['passo-1'] }}">
+			<a>Passo <span class="badge">1</span></a>
 		</li>
-	  	<li id="aba-tokenizer" class="{{ $nav['tokenizer'] }}">
-	  		<a><span class="badge">2</span> Tokenizer</a>
+	  	<li id="aba-passo-2" class="{{ $nav['passo-2'] }}">
+	  		<a>Passo <span class="badge">2</span></a>
 	  	</li>
-	  	<li id="aba-preprocessamento" class="{{ $nav['preprocessamento'] }}">
-	  		<a><span class="badge">3</span> Pré-processamento</a>
+	  	<li id="aba-passo-3" class="{{ $nav['passo-3'] }}">
+	  		<a>Passo <span class="badge">3</span></a>
 	  	</li>
-	  	<li id="aba-indice" class="{{ $nav['indice'] }}">
-	  		<a><span class="badge">4</span> Índice Invertido</a>
+	  	<li id="aba-passo-4" class="{{ $nav['passo-4'] }}">
+	  		<a>Passo <span class="badge">4</span></a>
+	  	</li>
+	  	<li id="aba-fim" class="{{ $nav['fim'] }}">
+	  		<a>Fim</a>
 	  	</li>
 	</ul>
 

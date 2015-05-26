@@ -7,7 +7,7 @@ class PrincipalController extends BaseController {
 		return View::make('template.index');
 	}
 
-	public function results()
+	public function resultados()
 	{
 		$data = Principal::parametros('resultados');
 		return View::make('template.empty', $data);

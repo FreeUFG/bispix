@@ -2,44 +2,38 @@
 
 class IndiceInvertidoController extends BaseController {
 
-	public function index()
+	public function passo1()
 	{
 		if( IndiceInvertido::bancoPronto() ){	
-			$data = IndiceInvertido::parametros('index');
+			$data = IndiceInvertido::parametros('passo-1');
 			return View::make('template.empty', $data);
 		}
 
 		return Redirect::to('/excecao/banco-pronto');
 	}
-	public function tokenizer()
+	public function passo2()
 	{
-        $nomeColecao = Input::get('nome-colecao');
-        IndiceInvertido::quebraPalavras($nomeColecao);
-
-        return Redirect::to('/gerar-indice/pre-processamento');
-	}
-	public function preprocessamento()
-	{
-		$data = IndiceInvertido::parametros('preprocessamento');
+		$data = IndiceInvertido::parametros('passo-2');
 		return View::make('template.empty', $data);
 	}
-	public function preprocessamentoAlgoritmo()
+	public function passo3()
 	{
-			IndiceInvertido::preprocessamentoAlgoritmo();
-			//return Redirect::to('/');
+		$nomeColecao = Input::get('nome-colecao');
+        IndiceInvertido::tokenizer($nomeColecao);
+
+		$data = IndiceInvertido::parametros('passo-3');
+		return View::make('template.empty', $data);
 	}
-	public function indice()
+	public function passo4()
 	{
-		$data['viewName'] = 'block.gerarIndice.index';
-		$data['panelName'] = 'block.gerarIndice.indice';
-		$data['scriptName'] = 'block.scriptGeraIndice';
+		IndiceInvertido::normalizacao();
 
-		$data['navAtivo'] = 'indice';
-		$data['panelUrl'] = URL::to('/');
-        $data['panelId'] = 'indiceForm';
-        $data['panelNext'] = 'Concluído';
-        $data['panelIcon'] = 'ok';
-
+		$data = IndiceInvertido::parametros('passo-4');
+		return View::make('template.empty', $data);
+	}
+	public function fim()
+	{
+		$data = IndiceInvertido::parametros('fim');
 		return View::make('template.empty', $data);
 	}	
 	public function colecao($id)

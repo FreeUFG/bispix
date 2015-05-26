@@ -1,13 +1,13 @@
 =================================================
 -------ALTA PRIORIDADE---------------------------
 =================================================
-  - Gerar o índice e postar na página o passo-a-passo
+  - Realização de consultas utilizando o índice:
+  		SELECT distinct documento FROM bispix.indice where termo='história';
 
  =================================================
 -------MÉDIA PRIORIDADE--------------------------
 =================================================
 
- - 
 
 
 =================================================

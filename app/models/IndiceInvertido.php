@@ -4,30 +4,33 @@ class IndiceInvertido extends Eloquent{
 
 	protected $table = 'indice';
 	
-	private static function listaDiretorio($nomeDiretorio)
+	public static function bancoPronto()
 	{
-		
-		$lista = scandir($nomeDiretorio);
-		$chave = array_search(".", $lista);
-		unset($lista[$chave]);
-		$chave = array_search("..", $lista);
-		unset($lista[$chave]);
+		$nomeTabela = (new self)->getTable();
 
-		return $lista;
-	}	
-	public static function quebraPalavras($nomeDiretorio)
+		if( Schema::hasTable($nomeTabela) ){
+			$val = self::all();
+			if(count($val) == 0) 
+				return true;
+		}
+		return false;		
+	}
+	public static function tokenizer($nomeDiretorio)
 	{
 		$endAbsoluto = app_path().'/data/colecoes/'.$nomeDiretorio;
 		$lista = self::listaDiretorio($endAbsoluto);
+		$tam = count($lista);
 
 		$log = app_path().'/data/colecoes/log.txt';
 
+		$i=1;
 		foreach($lista as $arq){
 			
 			$logFile = fopen($log,'w');
-			$data = "Indexando o arquivo ".$arq." ...";
+			$data = $i."-".$tam."-".$arq;
 			fwrite($logFile, $data);
 			fclose($logFile);
+			$i++;
 
 			$pont = fopen($endAbsoluto.'/'.$arq,'r');
 			if($pont){
@@ -62,19 +65,45 @@ class IndiceInvertido extends Eloquent{
 		fwrite($logFile, $data);
 		fclose($logFile);
 	}
-	public static function preprocessamentoAlgoritmo()
+	private static function listaDiretorio($nomeDiretorio)
+	{
+		
+		$lista = scandir($nomeDiretorio);
+		$chave = array_search(".", $lista);
+		unset($lista[$chave]);
+		$chave = array_search("..", $lista);
+		unset($lista[$chave]);
+
+		return $lista;
+	}
+	public static function normalizacao()
 	{
 		$triplas = self::all();
+		$tam = $triplas->count();
+		$log = app_path().'/data/colecoes/log.txt';
 
+		$i = 1;
 		foreach ($triplas as $t) {
+			$logFile = fopen($log,'w');
+			$data = $i."-".$tam;
+			fwrite($logFile, $data);
+			fclose($logFile);
+			$i++;
+
 			$termo = $t->termo;
 			$termo = self::normalizar($termo);
 			
 			$t->termo = $termo;
 			$t->save();
 		}
+
+		//Limpando o log do arquivo
+		$logFile = fopen($log,'w');
+		$data = "";
+		fwrite($logFile, $data);
+		fclose($logFile);
 	}
-	public static function normalizar($termo)
+	private static function normalizar($termo)
 	{
 		$simbolosRemocao = 
 			array(
@@ -86,53 +115,93 @@ class IndiceInvertido extends Eloquent{
 
 		return $termoNormalizado;
 	}
-	public static function bancoPronto()
-	{
-		$nomeTabela = (new self)->getTable();
-
-		if( Schema::hasTable($nomeTabela) ){
-			$val = self::all();
-			if(count($val) == 0) 
-				return true;
-		}
-		return false;		
-	}
 	public static function parametros($nomeMetodo)
 	{
 		switch($nomeMetodo){
-			case 'index':
-				return self::parametrosIndex();
+			case 'passo-1':
+				return self::parametrosPasso1();
 				break;
-			case 'preprocessamento':
-				return self::parametrosPreprocessamento();
+			case 'passo-2':
+				return self::parametrosPasso2();
+				break;
+			case 'passo-3':
+				return self::parametrosPasso3();
+				break;
+			case 'passo-4':
+				return self::parametrosPasso4();
+				break;
+			case 'fim':
+				return self::parametrosFim();
 				break;
 		}
 	}
-	private static function parametrosIndex()
+	private static function parametrosPasso1()
 	{
-		$data['viewName'] = 'site.gerar-indice';
-		$data['panelName'] = 'site.colecao.index';
-		$data['scriptName'] = 'site.colecao.script';
+		$data['viewName'] = 'site.gerar-indice.index';
+		$data['panelName'] = 'site.gerar-indice.passo-1.index';
+		$data['scriptName'] = 'block.script';
 
-		$data['navAtivo'] = 'colecoes';
-		$data['panelUrl'] = URL::to('/gerar-indice/tokenizer');
+		$data['navAtivo'] = 'passo-1';
+		$data['panelUrl'] = URL::to('/gerar-indice/passo-2');
         $data['panelId'] = 'colecaoForm';
         $data['panelNext'] = 'Próximo';
         $data['panelIcon'] = 'forward';
 
         return $data;
 	}
-	private static function parametrosPreprocessamento()
+	private static function parametrosPasso2()
 	{
-        $data['viewName'] = 'site.gerar-indice';
-		$data['panelName'] = 'site.preprocessamento.index';
-		$data['scriptName'] = 'block.script';
+		$data['viewName'] = 'site.gerar-indice.index';
+		$data['panelName'] = 'site.gerar-indice.passo-2.index';
+		$data['scriptName'] = 'site.gerar-indice.passo-2.script';
 
-		$data['navAtivo'] = 'preprocessamento';
-		$data['panelUrl'] = URL::to('/gerar-indice/pre-processamento-2');
-        $data['panelId'] = 'preprocessamentoForm';
+		$data['navAtivo'] = 'passo-2';
+		$data['panelUrl'] = URL::to('/gerar-indice/passo-3');
+        $data['panelId'] = 'colecaoForm';
         $data['panelNext'] = 'Próximo';
         $data['panelIcon'] = 'forward';
+
+        return $data;
+	}
+	private static function parametrosPasso3()
+	{
+		$data['viewName'] = 'site.gerar-indice.index';
+		$data['panelName'] = 'site.gerar-indice.passo-3.index';
+		$data['scriptName'] = 'site.gerar-indice.passo-3.script';
+
+		$data['navAtivo'] = 'passo-3';
+		$data['panelUrl'] = URL::to('/gerar-indice/passo-4');
+        $data['panelId'] = 'colecaoForm';
+        $data['panelNext'] = 'Próximo';
+        $data['panelIcon'] = 'forward';
+
+        return $data;
+	}
+	private static function parametrosPasso4()
+	{
+		$data['viewName'] = 'site.gerar-indice.index';
+		$data['panelName'] = 'site.gerar-indice.passo-4.index';
+		$data['scriptName'] = 'block.script';
+
+		$data['navAtivo'] = 'passo-4';
+		$data['panelUrl'] = URL::to('/gerar-indice/fim');
+        $data['panelId'] = 'colecaoForm';
+        $data['panelNext'] = 'Próximo';
+        $data['panelIcon'] = 'forward';
+
+        return $data;
+	}
+	private static function parametrosFim()
+	{
+		$data['viewName'] = 'site.gerar-indice.index';
+		$data['panelName'] = 'site.gerar-indice.fim.index';
+		$data['scriptName'] = 'block.script';
+
+		$data['navAtivo'] = 'passo-4';
+		$data['panelUrl'] = URL::to('/');
+        $data['panelId'] = 'colecaoForm';
+        $data['panelNext'] = 'OK';
+        $data['panelIcon'] = 'ok';
 
         return $data;
 	}

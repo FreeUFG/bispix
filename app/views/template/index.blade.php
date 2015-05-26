@@ -15,7 +15,7 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ URL::to('/gerar-indice') }}">Gerar índice</a></li>
+                        <li><a href="{{ URL::to('/gerar-indice/passo-1') }}">Gerar índice</a></li>
                         <li class="disabled"><a href="#">Usar outra coleção</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     {{ Form::open(array(
-                                      'url' => '/results',
+                                      'url' => '/resultados',
                                       'class' => 'form-inline',
                                       'id' => 'search',
                                       'name' => 'search'
