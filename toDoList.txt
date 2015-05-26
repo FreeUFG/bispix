@@ -14,5 +14,9 @@
 -------DICAS IMPORTANTES--------------------------
 =================================================
 
-
+- Tabelas do Heroku pulando de 10 em 10 no AUTO_INCREMENT
+	Muda as variáveis padrão do banco
+		SHOW VARIABLES LIKE 'auto_inc%'; 
+		SET @@auto_increment_increment=10;
+		SET @@auto_increment_offset=10;
 
