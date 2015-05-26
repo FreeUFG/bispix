@@ -197,7 +197,7 @@ class IndiceInvertido extends Eloquent{
 		$data['panelName'] = 'site.gerar-indice.fim.index';
 		$data['scriptName'] = 'block.script';
 
-		$data['navAtivo'] = 'passo-4';
+		$data['navAtivo'] = 'fim';
 		$data['panelUrl'] = URL::to('/');
         $data['panelId'] = 'colecaoForm';
         $data['panelNext'] = 'OK';

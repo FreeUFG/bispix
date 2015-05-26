@@ -1,6 +1,7 @@
 <?php
 
 Route::get('/', 'PrincipalController@index');
+Route::put('/', 'PrincipalController@index');
 Route::get('/resultados', 'PrincipalController@resultados');
 Route::post('/resultados', 'PrincipalController@resultados');
 
