@@ -1,5 +1,5 @@
 <div class="tokenizer">
-	<h2>Nomalização</h2>
+	<h2>Normalização</h2>
 
 	<p>Faça o pré-processamento linguístico, produzindo uma lista de <i>tokens</i> normalizados.</p>
 

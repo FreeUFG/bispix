@@ -4,12 +4,8 @@ class IndiceInvertidoController extends BaseController {
 
 	public function passo1()
 	{
-		if( IndiceInvertido::bancoPronto() ){	
-			$data = IndiceInvertido::parametros('passo-1');
-			return View::make('template.empty', $data);
-		}
-
-		return Redirect::to('/excecao/banco-pronto');
+		$data = IndiceInvertido::parametros('passo-1');
+		return View::make('template.empty', $data);
 	}
 	public function passo2()
 	{
@@ -18,7 +14,7 @@ class IndiceInvertidoController extends BaseController {
 	}
 	public function passo3()
 	{
-		$nomeColecao = Input::get('nome-colecao');
+		$nomeColecao = Session::get('nome-colecao');
         IndiceInvertido::tokenizer($nomeColecao);
 
 		$data = IndiceInvertido::parametros('passo-3');
@@ -33,6 +29,9 @@ class IndiceInvertidoController extends BaseController {
 	}
 	public function fim()
 	{
+		$nomeColecao = Session::get('nome-colecao');
+		Colecao::setNomeColecaoAtual($nomeColecao);
+		
 		$data = IndiceInvertido::parametros('fim');
 		return View::make('template.empty', $data);
 	}	

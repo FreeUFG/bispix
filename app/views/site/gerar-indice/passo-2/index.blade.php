@@ -6,5 +6,5 @@
 	<div class="tokenizer-loader-msg"></div>
 	<div class="tokenizer-loader"></div>
 	<div class="toklog" style="display: none"></div>
-	{{ Form::hidden('nome-colecao', Input::get('colecao')) }}
+	{{ Session::put('nome-colecao', Input::get('colecao')) }}
 </div>

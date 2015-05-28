@@ -20,3 +20,6 @@
 		SET @@auto_increment_increment=10;
 		SET @@auto_increment_offset=10;
 
+- Dicas importantes sobre como utilizar o artisan na linha de comando
+	http://laravel-tricks.com/tricks/run-artisan-commands-form-route-or-controller
+

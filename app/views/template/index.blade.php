@@ -1,26 +1,6 @@
 @include('block.header')
+@include('block.topmenu')
 
-    <body OnLoad="document.search.input.focus();">
-        <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="{{ URL::to('/') }}">Bispix</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="{{ URL::to('/gerar-indice/passo-1') }}">Gerar índice</a></li>
-                        <li class="disabled"><a href="#">Usar outra coleção</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-          </div><!-- /.container -->
-        </div><!-- /.navbar -->
         <div class="container-fluid text-center">
             <h1 style="font-size: 6em; margin-top: 1em;">
                 Bispix

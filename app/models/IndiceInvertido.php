@@ -4,16 +4,17 @@ class IndiceInvertido extends Eloquent{
 
 	protected $table = 'indice';
 	
-	public static function bancoPronto()
+	private static function prepararBanco()
 	{
 		$nomeTabela = (new self)->getTable();
 
-		if( Schema::hasTable($nomeTabela) ){
-			$val = self::all();
-			if(count($val) == 0) 
-				return true;
+		if( ! Schema::hasTable($nomeTabela) ){
+			Artisan::call('migrate:refresh');
+			Artisan::call('db:seed');
 		}
-		return false;		
+		else if(self::count() != 0){
+			self::truncate();
+		}		
 	}
 	public static function tokenizer($nomeDiretorio)
 	{
@@ -137,6 +138,8 @@ class IndiceInvertido extends Eloquent{
 	}
 	private static function parametrosPasso1()
 	{
+		self::prepararBanco();
+
 		$data['viewName'] = 'site.gerar-indice.index';
 		$data['panelName'] = 'site.gerar-indice.passo-1.index';
 		$data['scriptName'] = 'block.script';
