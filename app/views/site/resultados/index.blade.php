@@ -1,26 +1,23 @@
 <div class="panel panel-primary">
 
     <div class="panel-heading">
-        Resultados para <mark>consulta</mark> 
+        Resultados para <mark>{{ $query }}</mark>
     </div>
 
     <table class="table table-hover">
-        <?php
-            $results = ['00', '01', '02', '03', '04'];
-        ?>
 
-        @foreach ($results as $id)
+        @foreach ($postings as $id)
             <tr>
                 <td>
-                    <a href="" data-title="Documento {{ $id }}" data-route="{{ URL::to('colecao'.$id) }}" 
+                    <a href="" data-title="Documento {{ $id }}" data-route="{{ URL::to('colecao'.$id) }}"
                     class="openModal" data-toggle="modal" data-target="#modalDocument">
                         Documento {{ $id }}
                     </a>    <br/>
-                    <p>{{ substr( file_get_contents(app_path().'/data/colecoes/santa/'.$id.'.txt'), 0, 100 ) }}</p>
+                    <p>{{ substr( file_get_contents(app_path().'/data/colecoes/'.$enderecoColecao.'/'.$id.'.txt'), 0, 100 ) }}</p>
                 </td>
             </tr>
         @endforeach
-        
+
     </table>
 
     <div class="panel-footer text-center">

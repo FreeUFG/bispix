@@ -15,14 +15,14 @@
                                       'class' => 'form-inline',
                                       'id' => 'search',
                                       'name' => 'search'
-                                      )) 
+                                      ))
                     }}
                         <div class="form-group">
-                            <input style="width: 25em;" type="text" class="form-control" 
-                                placeholder="Busque aqui..." name="input">
+                            <input style="width: 25em;" type="text" class="form-control"
+                                placeholder="Busque aqui..." name="query">
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary" href="{{ URL::to('/results') }}">
+                            <button type="submit" class="btn btn-primary" href="{{ URL::to('/resultados') }}">
                                 Ir
                             </button>
                         </div>

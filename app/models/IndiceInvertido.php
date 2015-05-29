@@ -3,7 +3,7 @@
 class IndiceInvertido extends Eloquent{
 
 	protected $table = 'indice';
-	
+
 	private static function prepararBanco()
 	{
 		$nomeTabela = (new self)->getTable();
@@ -14,7 +14,7 @@ class IndiceInvertido extends Eloquent{
 		}
 		else if(self::count() != 0){
 			self::truncate();
-		}		
+		}
 	}
 	public static function tokenizer($nomeDiretorio)
 	{
@@ -26,7 +26,7 @@ class IndiceInvertido extends Eloquent{
 
 		$i=1;
 		foreach($lista as $arq){
-			
+
 			$logFile = fopen($log,'w');
 			$data = $i."-".$tam."-".$arq;
 			fwrite($logFile, $data);
@@ -41,12 +41,12 @@ class IndiceInvertido extends Eloquent{
 					if ($linha==null) break;
 
 					$termos = explode(' ', $linha);
-						
+
 					foreach($termos as $t){
 
 						$tripla = new IndiceInvertido;
 						$valor = trim($t);
-						
+
 						if( strlen($valor) ){
 							$posicao++;
 							$tripla->termo = $t;
@@ -68,7 +68,7 @@ class IndiceInvertido extends Eloquent{
 	}
 	private static function listaDiretorio($nomeDiretorio)
 	{
-		
+
 		$lista = scandir($nomeDiretorio);
 		$chave = array_search(".", $lista);
 		unset($lista[$chave]);
@@ -93,7 +93,7 @@ class IndiceInvertido extends Eloquent{
 
 			$termo = $t->termo;
 			$termo = self::normalizar($termo);
-			
+
 			$t->termo = $termo;
 			$t->save();
 		}
@@ -106,15 +106,23 @@ class IndiceInvertido extends Eloquent{
 	}
 	private static function normalizar($termo)
 	{
-		$simbolosRemocao = 
+		$simbolosRemocao =
 			array(
-				"?", "!", ",", ";", "(", 
+				"?", "!", ",", ";", "(",
 				")", "\"", ":", "."
 			);
 		$termoNormalizado = str_replace($simbolosRemocao, "", $termo);
 		$termoNormalizado = mb_strtolower($termoNormalizado);
 
 		return $termoNormalizado;
+	}
+	public static function postings($query)
+	{
+		$postings = IndiceInvertido::select('documento')
+						->where('termo', $query)
+						->distinct()
+						->lists('documento');
+		return $postings;
 	}
 	public static function parametros($nomeMetodo)
 	{

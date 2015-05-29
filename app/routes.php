@@ -11,7 +11,5 @@ Route::put('/gerar-indice/passo-3', 'IndiceInvertidoController@passo3');
 Route::put('/gerar-indice/passo-4', 'IndiceInvertidoController@passo4');
 Route::put('/gerar-indice/fim', 'IndiceInvertidoController@fim');
 
-Route::get('/excecao/banco-pronto', 'ExcecaoController@bancoPronto');
-
 Route::get('colecao{id}', 'IndiceInvertidoController@colecao');		//Importante para a exibição de documentos
 Route::get('toklog', 'IndiceInvertidoController@toklog');			//Importante para a exibição da barra de progresso

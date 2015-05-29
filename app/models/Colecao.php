@@ -13,6 +13,15 @@ class Colecao extends Eloquent{
 		else
 			return 'Nenhuma';
 	}
+	public static function getEnderecoColecaoAtual()
+	{
+		$c = self::where('em_uso', true)->first();
+
+		if($c)
+			return $c->endereco;
+		else
+			return 'sem-colecao';
+	}
 	public static function setNomeColecaoAtual($nomeColecao)
 	{
 		$colAntiga = self::where('em_uso', true)->first();
@@ -26,5 +35,5 @@ class Colecao extends Eloquent{
 		$colAtual->em_uso = true;
 		$colAtual->save();
 	}
-	
+
 }
