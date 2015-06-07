@@ -30,6 +30,8 @@ class IndiceInvertidoController extends BaseController {
 	public function fim()
 	{
 		$nomeColecao = Session::get('nome-colecao');
+		//Adiciona na tabela "colecao" a colecao atual
+		Colecao::setColecao($nomeColecao);
 		Colecao::setNomeColecaoAtual($nomeColecao);
 		
 		$data = IndiceInvertido::parametros('fim');
