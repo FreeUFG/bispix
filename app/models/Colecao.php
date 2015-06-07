@@ -3,7 +3,23 @@
 class Colecao extends Eloquent{
 
 	protected $table = 'colecao';
+	
+	//Se existir a colecao cadastrada na tabela conecao, retorna "Colecao ja Cadastrada"
+	public static function setColecao($nomeColecao)
+	{
+		$c = self::where('nome', $nomeColecao)->first();
 
+		if($c)
+			return "Colecao ja Cadastrada";
+	//Se não -> Cadastra no banco de dados		
+		else
+			$colecaotable = new Colecao;
+			$colecaotable->nome = $nomeColecao;
+			$colecaotable->nome_seletor = $nomeColecao;
+			$colecaotable->endereco = $nomeColecao;
+			$colecaotable->em_uso = false;
+			$colecaotable->save();
+	}
 	public static function getNomeColecaoAtual()
 	{
 		$c = self::where('em_uso', true)->first();
