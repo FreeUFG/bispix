@@ -124,6 +124,17 @@ class IndiceInvertido extends Eloquent{
 						->lists('documento');
 		return $postings;
 	}
+public static function postingsAND($query)
+	{
+		$postingsAND = IndiceInvertido::select('documento')
+						->where('termo', $query)
+						->distinct()
+						->lists('documento');
+		return $postingsAND;
+	}
+
+	
+
 	public static function parametros($nomeMetodo)
 	{
 		switch($nomeMetodo){

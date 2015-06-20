@@ -21,6 +21,15 @@ class ColecaoTableSeeder extends Seeder {
         $colecao->em_uso = false;
 
         $colecao->save();
+
+        $colecao = new Colecao;
+        
+        $colecao->nome = 'Jogos Eletronicos';
+        $colecao->nome_seletor = 'jogos';
+        $colecao->endereco = 'jogos';
+        $colecao->em_uso = false;
+
+        $colecao->save();
     }
 
 }

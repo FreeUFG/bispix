@@ -1,0 +1,6 @@
+League of Legends (LoL): Champions
+League of Legends conta com uma grande quantidade de campeões (bonecos, characters) e um novo será adicionado a cada três semanas10 .
+Os campeões são divididos em 3 "tiers":
+Tier 1: Com preços de 450 e 1350 IP (ou 280 e 585 RP, respectivamente), são os campeões mais antigos do jogo, lançados antes do início da primeira temporada.
+Tier 2: Com preços de 3150 e 4800 IP (ou 790 e 880 RP, respectivamente), são os campeões lançado entre o início da primeira temporada e o término da mesma.
+Tier 3: Com preços de 6300 e 7800 IP (ou ambos por 975 RP), são os campeões mais recentes. O campeão tem o preço de 7800 IP somente na semana de lançamento, tendo seu preço reduzido para 6300 IP na semana consecutiva.

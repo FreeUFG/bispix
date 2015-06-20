@@ -31,7 +31,6 @@ class Colecao extends Eloquent{
 			$colAntiga->em_uso = false;
 			$colAntiga->save();
 		}
-
 		$colAtual->em_uso = true;
 		$colAtual->save();
 	}
