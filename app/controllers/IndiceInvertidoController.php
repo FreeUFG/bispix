@@ -4,8 +4,19 @@ class IndiceInvertidoController extends BaseController {
 
 	public function passo1()
 	{
+		//Realiza a consulta nas colecoes, para retornar as pastas encontradas
+		$endAbsoluto2 = app_path().'/data/colecoes/';		
+		$lista = scandir($endAbsoluto2);
+		$chave = array_search(".", $lista);
+		unset($lista[$chave]);
+		$chave = array_search("..", $lista);
+		unset($lista[$chave]);
+		//Retira o arquivo log.txt do arquivo
+		$chave = array_search("log.txt", $lista);
+		unset($lista[$chave]);
+		
 		$data = IndiceInvertido::parametros('passo-1');
-		return View::make('template.empty', $data);
+		return View::make('template.empty', $data)->with('lista',$lista);;
 	}
 	public function passo2()
 	{
@@ -30,6 +41,8 @@ class IndiceInvertidoController extends BaseController {
 	public function fim()
 	{
 		$nomeColecao = Session::get('nome-colecao');
+		//Adiciona na tabela "colecao" a colecao atual
+		Colecao::setColecao($nomeColecao);
 		Colecao::setNomeColecaoAtual($nomeColecao);
 		
 		$data = IndiceInvertido::parametros('fim');
@@ -37,9 +50,10 @@ class IndiceInvertidoController extends BaseController {
 	}	
 	public function colecao($id)
 	{
+		$nomeColecao = Session::get('nome-colecao');
 		if(is_numeric($id)){
 			if(0 <= $id && $id <= 99){
-				echo file_get_contents(app_path().'/data/colecoes/santa/'.$id.'.txt');
+				echo file_get_contents(app_path().'/data/colecoes/'.$nomeColecao.'/'.$id.'.txt');
 				return;
 			}
 		}

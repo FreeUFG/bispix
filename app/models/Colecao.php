@@ -4,6 +4,20 @@ class Colecao extends Eloquent{
 
 	protected $table = 'colecao';
 
+	public static function setColecao($nomeColecao)
+	{
+		$c = self::where('nome', $nomeColecao)->first();
+
+		if($c)
+			return "Colecao ja Cadastrada";
+		else
+			$colecaotable = new Colecao;
+			$colecaotable->nome = $nomeColecao;
+			$colecaotable->nome_seletor = $nomeColecao;
+			$colecaotable->endereco = $nomeColecao;
+			$colecaotable->em_uso = false;
+			$colecaotable->save();
+	}
 	public static function getNomeColecaoAtual()
 	{
 		$c = self::where('em_uso', true)->first();
