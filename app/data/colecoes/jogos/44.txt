@@ -1,0 +1,2 @@
+Atributos[editar | editar código-fonte]
+Ao passar um nível de base, o jogador recebe pontos para serem distribuídos livremente entre seus atributos. Quanto mais pontos forem investidos em determinado atributo, mais pontos serão necessários para que se possa elevar o mesmo. Atributos influenciam diretamente no desempenho do personagem, e uma vez aumentados, não podem ser diminuídos novamente, até que o personagem vire uma transclasse, quando seus atributos são automaticamente "resetados". O limite para colocar é 120, além dos bônus dos equipamentos, contados separadamente.

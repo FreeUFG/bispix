@@ -1,0 +1,4 @@
+Mapas de detonação (prefixo de_)
+Nestes mapas o objetivo da equipe terrorista é detonar um artefato explosivo (bomba C4) num dos pontos de detonação possíveis (geralmente são dois pontos). A bomba C4 só pode ser colocada em uma dessas zonas pré-determinadas, também chamadas de bombs sendo o b1 e o b2. Se os Terroristas não conseguirem detoná-la ou se estes mesmos forem eliminados e a bomba não for plantada os contra-terroristas ganham a rodada.
+
+Os contra-terroristas ganham se eliminarem toda a equipe adversária antes da armação da bomba, se desativarem a bomba (o que pode ser agilizado com o auxílio de um kit de desarmamento, o defuser) ou ainda se até o término da rodada os terroristas não conseguirem armar a bomba. Os mapas mais populares desse tipo incluem de_dust, de_dust2,de_aztec, "de_nuke", "de_inferno" e "de_train".

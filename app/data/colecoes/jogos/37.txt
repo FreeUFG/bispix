@@ -1,0 +1,9 @@
+Ragnarok
+Interface[editar | editar código-fonte]
+O jogo mistura gráficos com personagens bidimensionais (sprites) com cenários em tridimensionais (3D). Para movimentar o personagem e conversar com NPCs utiliza-se o mouse, enquanto o teclado é usado para execução de habilidades (de acordo com os atalhos, que podem ser modificados) e para comunicação com outros jogadores. É possível visualizar o nome, a guild e a party de um personagem ao passar o ponteiro do mouse sobre ele.
+
+A tela de jogo apresenta uma "janela principal" composta de um menu com o desenvolvimento, o nome do personagem, sua classe, o HP, o SP, o peso em itens e o dinheiro do personagem. Existe também uma barra de atalhos que representam as teclas do F1 ao F9, podendo ser expansível em até quatro linhas. O jogador pode configurar seus itens, equipamentos e suas habilidades que serão usadas nele. Também existe uma barra de chat, que permite o jogador se comunicar publicamente com outros personagens presentes no mesmo mapa, ou privadamente com qualquer outro jogador, com os membros da guild, da party, e amigos. É possível alterar o "tema" das janelas utilizando skins.4
+
+Ao lado direito, são mostrados símbolos que indicam estado do personagem, como buffs ou status negativos. Ao passar o mouse no buff, é possível obter mais detalhes sobre e sua duração. Ao passar de nível de base ou classe, aparece um ícone no canto inferior esquerdo da tela, que funciona como atalho para suas respectivas janelas.
+
+Também existe o Battle Mode ( Modo de Batalha) que permite o uso, além do F1 ao F9, o uso do teclado para utilizar as habilidades. Com a Renovação, é possível modificar as teclas de sua preferência.

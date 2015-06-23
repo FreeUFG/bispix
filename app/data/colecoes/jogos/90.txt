@@ -1,0 +1,9 @@
+Garry's mod
+Requerimentos[editar | editar código-fonte]
+Mínimo: Processador Pentium 4 (3.0GHz, ou melhor), 1GB RAM, Placa de vídeo com suporte a DirectX® 9, Windows®, Mouse, Teclado, Conexão com a Internet.
+
+Recomendado: Processador Pentium 4 (3.0GHz, ou melhor), 1GB RAM, Placa de vídeo com suporte a DirectX® 9, Windows®, Mouse, Teclado, Conexão com a Internet.
+
+Garry's Mod é criticado por seu alto requerimento de memória RAM. Isto não é uma falta específica do jogo, pois vários jogos do estilo sandbox colocam os conteúdos do mapa na RAM, pesando o jogo. Jogabilidade travada pode ser evitada fazendo uma construção com o mínimo de interações possível (usar propriamente as ferramentas do jogo para reduzir o acúmulo de cálculos físicos).
+
+O mínimo oficial de RAM são 512MB, apesar da comunidade Garry's Mod recomendar ao menos 1GB para jogabilidade otimizada.

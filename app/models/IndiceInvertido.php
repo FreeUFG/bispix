@@ -124,14 +124,24 @@ class IndiceInvertido extends Eloquent{
 						->lists('documento');
 		return $postings;
 	}
+
 public static function postingsAND($query)
 	{
-		$postingsAND = IndiceInvertido::select('documento')
+		$postings = IndiceInvertido::select('documento')
 						->where('termo', $query)
 						->distinct()
 						->lists('documento');
-		return $postingsAND;
+		return $postings;
 	}
+
+	/*{	$tam = explode(' ', $query);
+		$tamcont = count($tam);
+		while($tamcont)
+		{ 
+			IndiceInvertido::postings($tam[$tamcont]);
+			
+		}
+	}*/
 
 	
 

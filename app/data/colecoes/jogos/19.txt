@@ -1,0 +1,13 @@
+Mapas de facas (prefixo ka_)
+Nestes mapas somente o uso da faca é permitido, entretanto existem locais secretos no qual os jogadores podem trapacear comprando outras armas. Dentre os mais famosos, pode-se destacar ka_colosseum, ka_matrix e ka_radical.
+
+Mapas de granadas (prefixo he_)
+São mapas em que só é permitido usar facas e granadas de forte explosão (chamadas HE Grenade). Os mais conhecidos desse tipo são : he_glass e he_tennis.
+
+Mapas de campo de luta (prefixo fy_)
+Neste mapas não existe objetivo a não ser apenas eliminar os inimigos. Dependendo do mapa, os jogadores tem acesso a todas as armas do jogo, que já estão espalhadas pelo chão do cenário. A vitória só ocorre quando todo o time adversário é eliminado. Os mais populares mapas desse tipo são fy_pool_day, fy_iceworld e fy_snow.
+
+Mapas de Regaste de Reféns e Detonação (prefixo csde_)
+Mapa extremamente técnicos, quase nunca visto em servidores, devido a sua falta de aceitação por muitos jogadores, nesses mapas, o objetivo é duplo. Existem reféns para serem resgatados e um local ou mais locais de bomba a serem detonados, A principio a vitória caso nenhum dos objetivos seja cumprido é dos contra terroristas, porem caso os terroristas armem a bomba, os CTs são obrigados a desarmar ela ou resgatar todos os reféns antes que ela detone.
+
+Contra terroristas não podem comprar kit de desarmamento nesse tipo de mapa

@@ -1,0 +1,24 @@
+No Brasil
+Counter-Strike iniciou no Brasil por iniciativa de dois servidores de jogos, Elogica e Unigames, inicialmente, o jogo pouco conhecido, um MOD do Half-Life, atraia poucos entusiastas que entravam nos servers desses dois provedores e aguardavam a entrada de outros jogadores, isso na versão Beta 1 do jogo. Aos poucos o game começou a atrair jogadores do Quake e outros jogos. No Beta 5 do mod já era o jogo online mais jogado no Brasil.
+
+Cultura do jogo
+Trapaças (Cheats)
+O uso de trapaças no jogo sempre foi amplamente criticado pelos jogadores. É recurso quase tão antigo quanto o próprio jogo, e é feito através de programas especiais ou através da console do jogo, que modificam configurações do motor gráfico utilizado, GoldSrc. Algumas trapaças comuns incluem visão através de paredes , aumento da velocidade do jogador e mira automática .
+
+A visão através de parede e outros objetos permite que um jogador veja outro escondido ou em outro ambiente. Isto garante a ele vantagem ao saber a localização do inimigo, permitindo que mire antecipadamente. Isto é feito alterando o motor gráfico do jogo para que os objetos sólidos sejam mostrados de forma semi-transparente.
+
+A mira automática permite que um jogador mire automaticamente no seu oponente quando presente, geralmente em sua cabeça, o que aumenta as chances de eliminá-lo. Os programas mais modernos para essa trapaça leem dados temporários na RAM que armazenam informações sobre a posição dos jogadores. Se o programa identifica que o oponente está na tela do jogador em uma distância razoável, ele automaticamente altera a posição do jogador para mirar no local desejado. Algumas variações dessa trapaça também atiram automaticamente. Como o tempo de reação de um computador é muito menor que de um humano, o uso dessa trapaça torna o jogador quase invencível. Seu uso é facilmente reconhecível por outros jogadores já que o utilizador sempre irá acertar a cabeça dos oponentes, mesmo que não desejem. Outra variante dessa trapaça simplesmente atira automaticamente quando o inimigo está na mira do jogador.
+
+As trapaças mais actuais continha protecções de antikick(até ser criado um programa anti hack desenvolvido pela Valve), ou seja, impossibilitava a desconexão do servidor do jogador através de votos dos jogadores da mesma equipe. Permitem também alteração dos céus dos mapas(cenários de jogo), extra-sangue (cada bala que se acerte no oponente, num ponto fraco, sai o dobro do sangue), enfim de certos gráficos do jogo.
+
+Há também a implantação de novos radares com as trapaças, onde aparecem os elementos de todas as equipes, terrorista e contra-terrorista, distinguido através de cores (vermelho: Terrorista e Azul: Contra-Terrorista).
+
+Outros tipos de trapaça incluem o famoso "telar" no qual o jogador olha outro computador ao lado do que ele está jogando, sabendo posição dos inimigos, bastante comum em lan houses.1
+
+Usos de programas VoIP para avisar algum companheiro vivo, ou até mesmo utilização do próprio sistema de friends que a steam proporciona. Alguns servidores utilizam a possibilidade do espectador poder ver todo o jogo depois de morto, o que possibilita esse tipo de trapaça. normalmente esse tipo de atitude pode ser confundida com visão através das paredes , alguns servidores punem esse tipo de atitude com ban permanente.
+
+Para tornar o jogo mais justo, a Valve lançou o programa VAC (Valve Anti-Cheat),9 que desde sua segunda versão já está habilitado na maioria dos servidores. Quando os jogadores trapaceiam em servidores dotados de VAC 2 correm o risco de serem banidos permanentemente de todos os servidores que utilizam a tecnologia, seja no Counter-Strike ou não. A primeira versão do VAC bane o utilizador por um ano, sendo que até setembro de 2003 o tempo de banimento era de cinco anos. O atual sistema de detecção chamada-se VAC 2, e bane os infratores permanentemente.
+
+Há um sistema paralelo ao VAC 2, o SteamBans,10 que já reúne algumas comunidades de Counter-Strike e servidores privados. Não tem a mesma quantidade de utilizadores que a da própria Valve, mas está a crescer a olhos vistos.
+
+Este sistema consiste na exclusão pelo método da Steam_ID (identificação alfanumérica única em cada conta), ou seja, ao conectar a um servidor com este tipo de protecção, o jogador entra e a sua Steam_ID é automaticamente comparada com a base de dados de utilizadores banidos, e se houver um resultado positivo, decorre a desconexão do jogador do servidor protegido pelo sistema.

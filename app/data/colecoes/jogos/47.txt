@@ -1,0 +1,2 @@
+Player versus Player (PvP)[editar | editar código-fonte]
+É uma modalidade de jogo no qual personagens de nível maior que 31 podem batalhar contra outros. Ocorrem em "réplicas" de algumas cidades (não possuindo NPCs ou portais), e pode ser jogado de duas formas: na primeira (YoYo), personagens não são penalizados ao morrerem; enquanto na segunda (Nightmare), há uma chance de que os equipamentos do personagem derrotado sejam derrubados. Em alguns servidores ou determinados eventos, é possível que áreas normais tenham o PvP habilitado.

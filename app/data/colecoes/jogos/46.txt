@@ -1,0 +1,4 @@
+Guildas[editar | editar código-fonte]
+Com o uso de um item especial chamado "Emperium", um jogador pode criar, através de um comando, uma "guilda". Pode-se escolher um nome - que não poderá ser mudado posteriormente - e um emblema (feito pelos próprios jogadores ou encontrado em sites), que pode ser mudado a qualquer hora. O criador da guild é chamado de "Guildmaster", e pode recrutar mais membros para a mesma. O Guildmaster pode dar diferentes autorizações para os membros, como recrutar, ou expulsar os demais jogadores. Existe também hierarquias, que podem ser modificadas.
+
+Guildas também possuem diferentes habilidades, que são ganhas ao subir de níveis, com o recebimento de EXP doado pelos membros. Somente o Guildmaster pode usar essas habilidades. Algumas como "Seal of Aproval", permite que a Guild possa conquistar um castelo na "War of Emperium". Um Guildmaster também pode configurar quais Guilds são suas aliadas ou inimigas.
