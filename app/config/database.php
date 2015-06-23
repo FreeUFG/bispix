@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '127.0.0.1',
-			'database'  => 'teste',
+			'database'  => 'trabalhoIA',
 			'username'  => 'user_ia',
 			'password'  => 'user_ia',
 			'charset'   => 'utf8',
