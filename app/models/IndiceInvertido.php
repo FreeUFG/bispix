@@ -347,51 +347,58 @@ class IndiceInvertido extends Eloquent{
 	return $result;
 	}
 
-	private static function consultaDocumentoID($posicao){
-	//Consulta simples de um termo e retorna seu id
-		$postings = IndiceInvertido::select('documento')
-							->where('posicao', $posicao)
-							->distinct()
-							->lists('documento');
-		return $postings;
-		break;
-	}
-	
 	//Consulta todas posicoes do termo no banco;
 	public static function consultaPosicao($termo){
-		$postings = IndiceInvertido::select('posicao')
+		$postings = IndiceInvertido::select('posicao','documento')
 		 					->where('termo', $termo)
-							->lists('posicao');
-
+		 					->get()
+		 					->toArray();
 		return $postings;
 		break;
 	}	
-	//Realiza a consulta por frase	
+
+	//Realiza a consulta por frase	entre os 2 termos
 	public static function consultaPorFrase($arrayPrimeiroTermo,$arraySegundoTermo) {
 		$p1 = 0;
 		$p2 = 0;
 		$count = count($arrayPrimeiroTermo);
 		$count2 = count($arraySegundoTermo);
-		$result =array();
-		while($p1!=$count & $p2!=$count2) {
-	
-				if($arrayPrimeiroTermo[$p1+1]==$arraySegundoTermo[$p2]){
-					array_push($result,$arraySegundoTermo[$p1]);
-					$p1++;
-					$p2++;
+		$Docs =array();
+		while($p1!=$count && $p2!=$count2) {
+			$posAtual  =$arrayPrimeiroTermo[$p1]["posicao"];
+			$posAtual2  =$arraySegundoTermo[$p2]["posicao"];
+			$docAtual = $arrayPrimeiroTermo[$p1]["documento"];
+			$docAtual2 = $arraySegundoTermo[$p2]["documento"];
+
+			//Compara os 2 arrays para encontrar OS MESMOS DOCUMENTOS
+			if($docAtual==$docAtual2)
+			{	
+				//Se encontrar, verifica a posAtual+1 do primeiro mais a posAtual
+	   			if($posAtual+1  ==   $posAtual2){					
+					array_push($Docs, $arrayPrimeiroTermo[$p1]["documento"]);
 				}
-				else if($arrayPrimeiroTermo[$p2]==$arraySegundoTermo[$p1]+1){
+				else if( $posAtual+1   <   $posAtual2){
+					
 				$p1++;
 				}
 				else {
-				$p2++;
+					$p2++;
 				}
+
+			$p1++;
+			$p2++;
 			}
-	
-		$resposta = self::consultaDocumentoID($result);
-		return $resposta;
+			else if($docAtual<$docAtual2){
+				$p1++;
+			}
+			else {
+				$p2++;
+			}
+		}
+		
+		return $Docs;
 	}
-	//Consulta todos os termos no documento passado por referencia.
+	//Consulta todos os termos no documento passado por referencia. Usado para calcular o TERMFREQUENCIA
 	private static function consultaTermosDocumentoID($documento){
 		$postings = IndiceInvertido::select('termo')
 					->where('documento', $documento)
