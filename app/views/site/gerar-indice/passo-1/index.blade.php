@@ -9,6 +9,7 @@
 			<select class="form-control" name="colecao">
 				<option value="santa">Santa Cruz</option>
 				<option value="teste">Coleção de Teste</option>
+				<option value="bebidas">Bebidas</option>
 			</select>
 			<br>
 		</div>
