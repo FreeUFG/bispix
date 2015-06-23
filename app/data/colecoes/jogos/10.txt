@@ -1,0 +1,9 @@
+League of Legends (LoL): Meta-jogo
+
+Os campeões são divididos por várias funções que possam desempenhar:
+Atirador ou adc - É o campeão que possui alto dano físico, possui longo alcance de ataque e tem a função de "carregar" o time, resultando em grande diferença na hora de realizar as "Team Fights".
+Off-Tank - É o campeão que possui uma quantidade considerável de defesa (vida, armadura e resistência), mas ainda possui uma boa quantidade de dano. Geralmente ficam na top-lane. E ajudam muito a reduzir a vida de um oponente inimigo para que haja sucesso na hora da "Team Fight"
+Tank - É o campeão focado em receber todo o dano do time adversário. Este tipo de champion não possui um dano significativo mas não pode ser facilmente morto. Por sua alta defesa e resistência, ele geralmente não é focado pelo time adversário. Tanks tem a função também de iniciar as Team Battles. Geralmente são junglers ou ficam na top-lane (podem ser suportes também, mas nunca AD carry ou AP carry).
+Support (supp) - Tem a função de ajudar o AD carry. Geralmente são campeões com pouca defesa, porém com habilidades de controle de grupo ou de buffs para o time.
+AP (geralmente o mid) - É o campeão que possui alto dano baseado no poder de habilidade. Responsável por tirar a vida do inimigo rapidamente utilizando de suas habilidades e não o dano físico.
+Jungler - É o campeão que não vai em nenhuma lane. Ele obtém dinheiro (gold) para a compra de seus itens derrotando os monstros da selva, que têm posições fixas, espalhados pela selva entre as lanes. Sua principal função é criar um ataque surpresa (gank) para que o jogador da lane que recebeu o ataque mate o adversário. Um bom jungler também é suporte, isto é, não obtém todas os abates dos ganks.

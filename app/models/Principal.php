@@ -21,4 +21,19 @@ class Principal extends Eloquent{
 
         return $data;
 	}
+
+private static function parametrosResultadosAND()
+	{
+		$query = Input::get('query');
+		
+		$data['query'] = $query;
+		$data['enderecoColecao'] = Colecao::getEnderecoColecaoAtual();
+		$data['viewName'] = 'site.resultados.index';
+		$data['scriptName'] = 'site.resultados.script';
+		$data['postings'] = Consulta::executar($query);
+
+        return $data;
+	}
+	
+
 }

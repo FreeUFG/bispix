@@ -1,0 +1,2 @@
+Equipamentos[editar | editar código-fonte]
+Os equipamentos são divididos em dez categorias: cabeça (baixo, médio e alto), corpo, capa, mão esquerda, mão direita, sapatos, acessório esquerdo e acessório direito. E servem para aumentar os atributos de um personagem. Alguns equipamentos podem possuir um ou mais espaços que podem ser preenchidos com cartas que dão poderes especiais adicionais aos equipamentos. Alguns equipamentos também combam com outros, trazendos mais benefícios a determinado personagem.

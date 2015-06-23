@@ -1,0 +1,4 @@
+Monstros[editar | editar código-fonte]
+São NPCs que agem sob inteligência artificial, e são encontrados nos mais variados mapas do jogo. Podem, ou não, se locomover, assim como podem atacar o jogador sem que o mesmo o tenha provocado. Possuem também a capacidade de usar skills(Habilidades), e são divididos por várias raças, formas e níveis.
+
+Existem também, em alguns mapas, os "chefes" popularmente chamados de "boss" ou "MVP". Os monstros desse tipo são mais fortes e qualquer jogador pode atacá-lo. Quando o mesmo é derrotado, os prêmios pela conquista são distribuidos aos jogadores que infligiram maior índice de dano sobre ele. Geralmente, esses chefes vem acompanhados por outros monstros.

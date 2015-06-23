@@ -1,0 +1,5 @@
+Ragnarok
+Sistema de habilidades[editar | editar código-fonte]
+As habilidades de um personagem variam de classe para classe. São divididas em duas categorias: Passivas e Ativas sendo esse último dividido em duas subcategorias: Ofensivas e Suportes . As habilidades são divididas em vários níveis, que podem ser aumentados com o ganho de pontos ao subir o nível de classe. A habilidade só poderá ser usada após a inserção de pontos na mesma. Algumas habilidades necessitam de um determinado nível de outras para serem habilitadas.
+
+Existem também habilidades fixas que podem ser adquiridas através de quests, e outras utilizando certos equipamentos, cartas, e itens consumíveis.

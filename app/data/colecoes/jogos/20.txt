@@ -1,0 +1,7 @@
+Mapas de Zumbi (prefixo zm_)
+Geralmente sao modificacoes de mapas originais como de_dust2 que se transformaram em zm_dust2 para os mods de zombie (Biohazard, Zombie Infection Mod, Zombie Mod, Zombie Swarm 2.4, Zombie Plague 3.88, Zombie 28 Weeks later), que contem alguns pontos seguros como caixotes altos onde zumbis nao alcançam.
+
+Geralmente também há acessórios para humanos escondidos nos mapas, como coletes, que geralmente auxiliam na proteção contra eventuais infecções, há também granadas de destruição, e armas.
+
+Mapas de DeathRun (prefixo deathrun_)
+Mapas em que o terrorista deve matar seus inimigos derrubando-os com armadilhas espalhadas pelo mapa.Os contra-terroristas devem ir até o final do mapa, seja "Bunnando" ou normalmente.Existem coisas para auxiliar como: Gravidade, aumento de velocidade, Bunny hop e vidas extras.

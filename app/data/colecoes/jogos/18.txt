@@ -1,0 +1,13 @@
+Mapas não-oficiais
+Os mapas a seguir foram criados por fãs após a grande popularização do jogo em todo o mundo.
+
+Mapas de Surf (prefixo surf_)
+Modo de jogo baseado num "bug" descoberto por um jogador. Ele criou o mapa surf_the-gap utilizando o bug, e desde então, outros mapas foram criados e o surf tem cada vez mais jogadores. Hoje o mapa mais popular é o surf_ski_2, onde o objetivo é eliminar a equipe adversária. Existem inúmeros outros mapas, designados para "Freestyle", onde o objetivo é fazer manobras, ou para "Speedrun", mapas onde o jogador precisa passar de vários níveis e chegar no fim do curso o mais rápido o possível.
+
+Mapas de atiradores de elite (prefixo awp_)
+Nestes mapas só é permitido a arma awp e pistolas. Os mais conhecidos desse tipo são : awp_india e awp_dust.
+
+Mapas de arma única (prefixo aim_)
+Nestes mapas todos os jogadores recebem uma única arma e, assim como os mapas de luta, só ocorre resultado quando toda a equipe adversária é eliminada. Geralmente este tipo de mapa é usado por clãs para treinar a mira de seus membros com cada uma das armas (como o nome "aim", que significa "mira" em inglês, já sugere).
+
+Normalmente, cada time só tem acesso a dois tipos de arma. Por exemplo: o time terrorista tem acesso ao seu rifle principal de guerrilha, a famosa Avtomatik Kalashnikov, modelo de fabricação ano 1947 (mais conhecida como AK-47), e também a Artic Warfare Magnum (comumente chamada de AWP), o time contra-terrorista por sua vez, tem acesso ao seu principal rifle, a famosa Colt M4A1 Carbine, e também tem acesso à AWP. Os mapas mais populares deste tipo são aim_ak_colt, aim_awp, aim_usp e aim_headshot.

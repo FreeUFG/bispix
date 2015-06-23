@@ -1,0 +1,7 @@
+HoN
+Alterações em relação ao DotA[editar | editar código-fonte]
+A maior parte mecânica do jogo e muitos heróis em Heroes of Newerth ter uma correlação direta do Defense of the Ancients. As novidades que diferenciam Heroes of Newerth de Defense of the Ancients são características independentes da jogabilidade, como o acompanhamento de estatísticas individuais, VOIP durante a partida, seleção de heróis simplificada, reconexão ao jogo, construir partidas , lista de jogadores banidos e chat.
+
+Vários recursos adicionados através de atualizações incluem o Hero Compendium (uma lista dos heróis no jogo com estatísticas detalhadas sobre eles), a capacidade de continuar uma partida quando um jogador sai/entra na partida (semelhante ao sistema de "party" em outros jogos) e um editor de mapas.
+
+O jogo usa uma engine da própria S2 Games, a K2 Engine. Uma engine com modelo cliente-servidor similar ao utilizado em muitos jogos multiplayer modernos.5 6

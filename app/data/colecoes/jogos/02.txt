@@ -1,0 +1,4 @@
+Dota 2: Desenvolvimento
+
+Dota começou como uma modificação para Warcraft 3 e cresceu em um dos jogos mais jogados online do mundo. Seguindo a tradição de Counter-Strike, Day of Defeat, Team Fortress, Portal e Alien Swarm, Dota 2 é o resultado da Valve contratar os desenvolvedores da comunidade que construíram o mod e dando-lhes a oportunidade de finalmente construir um produto completo de sua ideia com a ajuda de uma equipe profissional de desenvolvedores e artistas de Valve.
+Assim como seu antecessor, DotA 2 traz novos elementos estratégicos associados à fantasia clássica de Warcraft. O jogo traz batalhas entre equipes, nas quais cada um a deve destruir os “ancestrais” das demais — estruturas fortemente guardadas nos cantos do mapa.

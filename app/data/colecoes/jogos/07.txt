@@ -1,0 +1,10 @@
+League of Legends (LoL): Killing Sprees e Multi Kills
+
+Killing sprees são níveis especiais que se ganha quando uma certa quantidade de inimigos é morta, para alcançar os Killing Sprees é necessário que o jogador não morra enquanto soma os seus abates. Um jogador que esteja em killing spree e é morto garante ao jogador que o matou dinheiro extra. A sequência segue a seguinte ordem:
+Killing spree: 3 abates
+Enfurecido (Rampage): 4 abates
+Implacável (Unstoppable): 5 abates
+Dominando (Dominating): 6 abates
+Invencível (Godlike): 7 abates
+Lendário (Legendary): 8 abates ou mais
+Além de Killing sprees, existe outra lista que serve para contabilizar quantos inimigos um único jogador pode matar num intervalo de 12 segundos contados a partir do último abate. A sequência é double kill (2 abates), triple kill (3 abates), quadra kill (4 abates), penta kill (5 abates), hexa kill (6 abates, porém só em um modo especial de jogo).

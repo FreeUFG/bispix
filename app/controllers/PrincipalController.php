@@ -13,4 +13,5 @@ class PrincipalController extends BaseController {
 		return View::make('template.empty', $data);
 	}
 
+
 }

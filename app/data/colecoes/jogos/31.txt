@@ -1,0 +1,13 @@
+História
+Ver artigo principal: História dos jogos eletrônicos
+A primeira menção ao que se assemelha a um vídeo game data de 1947 - um "Dispositivo de entretenimento com tubo de raios catódicos", patenteado no ano seguinte por Thomas T. Goldsmith Jr. e Estle Ray Mann. Inspirado na tecnologia de radares, consistia em um dispositivo analógico que permitia controlar um ponto vetorizado na tela, simulando mísseis acertando alvos, que eram simplesmente pontos fixos na tela.2 3
+
+Na sequência, temos mais alguns exemplos prosaicos dos antepassados dos video games atuais:
+
+O computador NIMROD no Festival da Inglaterra de 1951;
+OXO: um jogo da velha eletrônico feito por Alexander S. Douglas para o computador EDSAC em 1952;
+Tennis for Two: um video game criado por William Higinbotham em 1958;
+Spacewar! : escrito pelos estudantes Martin Graetz, Steve Russell, e Wayne Wiitanen's em um computador DEC PDP-1 em 1961.
+Todos estes possuíam "telas" diferentes. O NIMROD utilizava-se de um painel de luzes para o jogo Nim 4 , OXO tinha uma tela própria 5 , Tennis for Two usava um osciloscópio 3 e SpaceWar! usava o display de vetores do PDP-1 6
+
+Em 1971, a empresa Computer Space, criada por Nolan Bushnell e Ted Dabney, inicia a venda do primeiro arcade do mundo, baseado no jogo SpaceWar!. Em 1972, é lançado o primeiro console doméstico da história: Odyssey da empresa Magnavox.7 Neste mesmo ano, Nolan Bushnell, agora trabalhando na Atari, lança o primeiro grande sucesso comercial de um video game, o jogo arcade Pong.8 Este sucesso abriu caminho para inúmeras outras empresas, dando início assim à lucrativa indústria dos video games.9

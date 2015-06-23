@@ -1,0 +1,9 @@
+Ragnarok
+Mecânica do jogo
+Criação e customização do personagem[editar | editar código-fonte]
+Ao criar um personagem é possível escolher um nome, e cor e estilo do cabelo. É possível alterar sua aparência utilizando equipamentos para a cabeça,como chapéus. Enquanto os avatares do personagem variam de classe para classe. O sexo do personagem é determinado ao criar a conta, e geralmente é o mesmo do usuário, devido à limitações técnicas e à política da Gravity.
+
+Desenvolvimento do personagem
+O desenvolvimento do personagem é avaliado de duas formas: o Base level (Nível de Base) e Job level (nível de classe). O primeiro, é fixo, e indica o nível do personagem; se inicia do nível 1, e tem como limite 150. Cada vez que um personagem passa de nível de base, ele recebe alguns pontos para distribuir livremente entre seus atributos. O segundo, nível de classe, indica o nível atual da profissão do personagem. Cada vez que o personagem passa de nível de classe, recebe um ponto para adquirir uma habilidade, ou um nível de habilidade. Esta possui diferentes limites, dependendo da classe.
+
+Para subir os níveis de um personagem, o jogador deve adquirir EXP (pontos de experiência), que são recebidas, principalmente, ao derrotar monstros. Existem também quests, que ao serem completadas dão EXP ao jogador.

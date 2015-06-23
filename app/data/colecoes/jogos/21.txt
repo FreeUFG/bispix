@@ -1,0 +1,4 @@
+Equipamentos
+
+
+Um dos motivos do sucesso do Counter-Strike é o seu sistema de compra e seu grande arsenal. Por motivos legais, o nome de algumas armas teve que ser modificado no jogo, assim que o primeiro nome é o real, e o segundo, do 1.6 em diante. Algumas informações sobre as especificações das armas estão erradas no jogo. Os equipamentos do jogo consistem basicamente de armas de diversos portes e de utilitários bélicos. As armas estão divididas em pistolas, escopetas, sub-metralhadoras e rifles e metralhadoras. Os utilitários consistem de granadas(Que podem causar dano,cegar ou atrapalha o oponente), coletes de segurança, óculos de visão noturna e kits difusores (utilizados para desarmar a bomba). Um jogador pode carregar consigo uma pistola, um outro tipo de arma de grande porte e um número limitado de utilitários.

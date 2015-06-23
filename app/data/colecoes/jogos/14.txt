@@ -1,0 +1,4 @@
+Sprays
+Sprays são imagens digitais com o qual os jogadores pintam o cenário, em paredes, no chão ou em tetos baixos. Existem diversos desenhos incluídos com o jogo, e também podem ser importados do disco rígido. Em Source os jogadores podem importar qualquer imagem, já no Counter-Strike 1.6 não existe método oficial para importar imagens. Deve se usar um programa especial como o HL Tag Converter por exemplo.
+
+Os sprays são geralmente usados no início da rodada, sobre o corpo de um oponente que o jogador abateu, ou em locais específicos para distrair os adversários. É comum o uso de imagens pornográficas, animadas ou até mesmo chocantes para distração. Existem também vários sprays com logotipos de diversos locais em que os players costumam jogar e assim acabam fazendo uma 'propaganda' do estabelecimento.
