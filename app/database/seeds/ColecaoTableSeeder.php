@@ -21,6 +21,15 @@ class ColecaoTableSeeder extends Seeder {
         $colecao->em_uso = false;
 
         $colecao->save();
+
+        $colecao = new Colecao;
+
+        $colecao->nome = 'Harry Potter';
+        $colecao->nome_seletor = 'harrypotter';
+        $colecao->endereco = 'harrypotter';
+        $colecao->em_uso = false;
+
+        $colecao->save();
     }
 
 }

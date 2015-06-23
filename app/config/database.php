@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '127.0.0.1',
-			'database'  => 'bispix',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'teste',
+			'username'  => 'user_ia',
+			'password'  => 'user_ia',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
