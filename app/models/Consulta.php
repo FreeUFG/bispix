@@ -11,7 +11,7 @@ class Consulta extends Eloquent{
 				return self::consultaSimples($query);
 				break;
 			case 2:
-				return self::consultaFrase($query);
+				return self::verificaConsulta2Termos($query);
 				break;
 			case 3:
 				return self::verificaConsulta3Termos($query);
@@ -149,6 +149,28 @@ class Consulta extends Eloquent{
 		return $respostaOR;
 	}
 
+	private static function consultaNOT($query){
+		$termo = explode(' ', $query);
+		$resultado = IndiceInvertido::postings($termo[1]);
+		$resposta = array();
+		$i = "00";
+		while( list($j, $resp) = each($resultado)){
+			while( $i < $resp){
+				if( strlen($i) == 1){
+					$i = str_pad($i, 2, "0", STR_PAD_LEFT);
+				}
+				array_push($resposta, $i);
+				$i++;
+			}
+			$i++;
+		}
+		while($i < "99"){
+			array_push($resposta, $i);
+			$i++;
+		}
+		return $resposta;
+	}
+
 	private static function verificaConsulta3Termos($query){
 		$termos = explode(' ', $query );
 		if( strcasecmp($termos[1], "AND") == 0 ){
@@ -162,6 +184,26 @@ class Consulta extends Eloquent{
 				}
 			}
 		}
+	}
+
+	private static function verificaConsulta2Termos($query){
+		$termos = explode(' ', $query );
+		if( strcasecmp($termos[0], "ONT") == 0 ){
+			echo "Consulta por ontologia";
+			return self::consultaOntologia($query);
+		}else{
+			if( strcasecmp($termos[0], "NOT") == 0  ){
+				return self::consultaNOT($query);
+			}else{
+				return self::consultaFrase("$query");
+			}
+		}
+	}
+
+	private static function consultaOntologia($query){
+		$consulta = new ConsultaOntologia;
+		$query = "Harry";
+		return self::consultaSimples($query);
 	}
 
 
