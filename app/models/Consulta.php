@@ -133,6 +133,9 @@ class Consulta extends Eloquent{
 	}
 
 	private static function consultaXOR($query) {
+		$termos = explode(' ', $query);
+		$queryAND = "$termos[0] AND $termos[2]";
+		$queryOR = "$termos[0] OR $termos[2]";
 		$respostaAND = self::consultaAND($query);
 		$respostaOR = self::consultaOR($query);
 		
@@ -143,7 +146,6 @@ class Consulta extends Eloquent{
 				}
 			}
 		}
-		
 		return $respostaOR;
 	}
 
@@ -156,7 +158,7 @@ class Consulta extends Eloquent{
 				return self::consultaOR($query);
 			}else{
 				if( strcasecmp($termos[1], "XOR") == 0 ){
-					//implementar
+					return self::consultaXOR($query);
 				}
 			}
 		}
