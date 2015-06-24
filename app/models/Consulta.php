@@ -92,13 +92,68 @@ class Consulta extends Eloquent{
 		return $respostaConsulta;
 	}
 
+
+	private static function consultaOR($query){
+		$termos = explode(' ', $query);
+		$resposta = array();
+		$posts1 = IndiceInvertido::postings($termos[0]);
+		$posts2 = IndiceInvertido::postings($termos[2]);
+		$tam1 = count($posts1);
+		$tam2 = count($posts2);
+		$i = 0; $j = 0;
+		while( ($i < $tam1) && ($j < $tam2) ){
+			if( strcasecmp( current($posts1), current($posts2)) == 0 ){
+				array_push($resposta, current($posts1));
+				next($posts1); next($posts2);
+				$i++; $j++;
+			}else{
+				if( strcasecmp( current($posts1), current($posts2)) < 0 ){
+					array_push($resposta, current($posts1));
+					next($posts1);
+					$i++;
+				}else{
+					array_push($resposta, current($posts2));
+					next($posts2);
+					$j++;
+				}
+			}
+		}
+		if( $j < $tam2){
+			while( list($j, $resp) = each($posts2) ){
+				array_push($resposta, $resp);
+			}
+		}else{
+			if( $i < $tam1){
+				while( list($i, $resp) = each($posts1) ){
+					array_push($resposta, $resp);
+				}	
+			}
+		}
+		return $resposta;
+	}
+
+	private static function consultaXOR($query) {
+		$respostaAND = self::consultaAND($query);
+		$respostaOR = self::consultaOR($query);
+		
+		foreach($respostaOR as $i => $docOR) {
+			foreach($respostaAND as $docAND) {
+				if($docOR == $docAND) {
+					unset($respostaOR[$i]);
+				}
+			}
+		}
+		
+		return $respostaOR;
+	}
+
 	private static function verificaConsulta3Termos($query){
 		$termos = explode(' ', $query );
 		if( strcasecmp($termos[1], "AND") == 0 ){
 			return self::consultaAND($query);
 		}else{
 			if( strcasecmp($termos[1], "OR") == 0 ){
-				///implementar
+				return self::consultaOR($query);
 			}else{
 				if( strcasecmp($termos[1], "XOR") == 0 ){
 					//implementar
