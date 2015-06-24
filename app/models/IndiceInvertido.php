@@ -47,10 +47,14 @@ class IndiceInvertido extends Eloquent{
 						$tripla = new IndiceInvertido;
 						$valor = trim($t);
 
+						$arqNovo = $arq;
+						if(strlen($arq)>2) 
+							$arqNovo = substr($arq, 0, 2);
+
 						if( strlen($valor) ){
 							$posicao++;
 							$tripla->termo = $t;
-							$tripla->documento = $arq;
+							$tripla->documento = $arqNovo;
 							$tripla->posicao = $posicao;
 							$tripla->save();
 						}
@@ -124,6 +128,26 @@ class IndiceInvertido extends Eloquent{
 						->lists('documento');
 		return $postings;
 	}
+
+	public static function posicoes($query, $documento){
+		$tam = count($documento);
+		$posicoes = array();
+		for( $i = 0; $i < $tam; $i++ ){
+			$d = current($documento);
+			$resp = IndiceInvertido::select('posicao')
+			                       ->where('termo', $query)
+			                       ->where('documento', $d)
+			                       ->distinct()
+			                       ->lists('posicao');
+		//	echo "No documento $d, o termo $query aparece nas posicoes:";
+		//	print_r($resp);
+			array_push($posicoes, $resp);
+			next($documento);
+		}
+		//print_r($posicoes);
+		return $posicoes;
+	}
+
 	public static function parametros($nomeMetodo)
 	{
 		switch($nomeMetodo){

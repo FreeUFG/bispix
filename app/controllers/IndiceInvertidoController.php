@@ -39,7 +39,7 @@ class IndiceInvertidoController extends BaseController {
 	{
 		if(is_numeric($id)){
 			if(0 <= $id && $id <= 99){
-				echo file_get_contents(app_path().'/data/colecoes/santa/'.$id.'.txt');
+				echo file_get_contents(app_path().'/data/colecoes/harrypotter/'.$id.'.txt');
 				return;
 			}
 		}
