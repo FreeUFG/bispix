@@ -1,37 +1,27 @@
-# Bispix
+# Laravel PHP Framework
+
+[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-## Ferramentas importantes
-  - [Git](http://git-scm.com/downloads): Sistema para controle de versão de código;
-  - [XAMPP](https://www.apachefriends.org/pt_br/download.html): Distribuição Apache fácil de instalar contendo PHP, MySQL e Perl;
-  - [Composer](https://getcomposer.org/download/): Gerenciador de dependências para PHP;
-  - [Sublime](http://www.sublimetext.com/3): Editor de texto, muito utilizado por desenvolvedores web;
-  - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/): Ferramenta gratuita para gerenciamento de banco de dados (é necessário o registro gratuito na Oracle).
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-## FAQ - uso da ferramenta
+Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-1. Como utilizar o banco de dados no Laravel?
-  - Configure o arquivo `app/config/database.php` na parte de `connections` com os dados do seu servidor MySQL (local ou remoto);
-  - Crie um banco de dados no seu servidor (com o nome que você informou no arquivo acima);
-  - Execute, na linha de comando, dentro do diretório do projeto, o comando `php artisan migrate` para criar as tabelas a partir dos códigos já existentes (ver pasta `app/database/migrations`);
-  - Para resetar o banco, execute, na linha de comando, dentro do diretório do projeto, o comando `php artisan migrate:rollback`.
+## Official Documentation
 
-2. Estou tendo mensagens de erros que exibem `Maximum execution time` no meu navegador! 
-  - Aumente o tempo máximo de execução no arquivo PHP.ini. 
-  - Procure no seu servidor onde você pode editar este arquivo
-  - Alguma parte do arquivo deve conter as seguintes linhas:
-  ```
-; Maximum execution time of each script, in seconds
-; http://php.net/max-execution-time
-; Note: This directive is hardcoded to 0 for the CLI SAPI
-max_execution_time=30
-```
-  - Mude a linha ``max_execution_time=30`` para ``max_execution_time=600``, por exemplo (de 30s para 10min).
+Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-3. Estou tendo mensagens de aviso no navegador associadas a algum arquivo ``autoload`` (warning na linha 17)!
-  - Possivelmente existe alguma dependência desatualizada no seu projeto;
-  - Execute, na linha de comando, dentro do diretório do projeto, o comando ``composer update`` (necessária conexão com Internet).
-  
-### License
+## Contributing
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
